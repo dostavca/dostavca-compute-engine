@@ -21,9 +21,16 @@ import javax.ws.rs.core.Response;
 public class ComputeEngineResource {
 
     @GET
-    @Metered(name = "check-balance-meter")
-    @Path("check-balance")
-    public Response checkBalance(User user) {
-        return Response.ok(user.getBalance()).build();
+    @Metered(name = "find-best-driver-meter")
+    @Path("find-best-driver")
+    public Response findBestDriver(Transport transport) {
+        return Response.ok().build();
+    }
+
+    @GET
+    @Metered(name = "recommend-travel-time-meter")
+    @Path("recommend-travel-time")
+    public Response recommendTravelTime(Transport transport) {
+        return Response.ok().build();
     }
 }
